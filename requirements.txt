@@ -1,0 +1,6 @@
+pandas>=2.0
+matplotlib>=3.8
+sentence-transformers>=3.0
+chromadb>=0.5
+requests>=2.31
+google-genai>=1.0

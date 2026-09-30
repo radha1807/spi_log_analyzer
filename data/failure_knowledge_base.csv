@@ -1,0 +1,13 @@
+failure_id,failure_type,description,possible_causes,evidence,recommended_checks
+F001,MISSING_ACK,"Expected ACK was not received after command transmission","Slave timing issue; MISO not driven; incorrect ACK handling","Expected 0xAA but observed 0xFF","Check MISO timing; verify ACK generation; inspect slave response timing"
+F002,SPI_TIMEOUT,"SPI transaction exceeded the expected response window","Slave busy; communication deadlock; incorrect timeout configuration","Response delay exceeds configured timeout","Check slave state; verify timeout configuration; inspect clock and ACK timing"
+F003,WRONG_RESPONSE,"Slave returned an unexpected response byte","Protocol mismatch; incorrect command handling; corrupted data","Observed response differs from expected response","Compare command/response mapping; inspect protocol implementation"
+F004,MISO_STUCK_HIGH,"MISO remains continuously high","MISO floating; missing pull-down; slave not driving line","Observed response is 0xFF","Check MISO electrical state; verify slave output configuration"
+F005,MISO_STUCK_LOW,"MISO remains continuously low","Short to ground; incorrect GPIO configuration; bus contention","Observed response is 0x00","Check GPIO configuration; inspect physical bus"
+F006,CLOCK_TOO_FAST,"SPI clock exceeds supported frequency","Incorrect clock configuration","Measured clock exceeds configured limit","Measure SPI frequency; reduce clock rate"
+F007,CLOCK_TOO_SLOW,"SPI clock is significantly below expected frequency","Incorrect divider; timing configuration issue","Measured clock below expected range","Check clock divider and peripheral configuration"
+F008,BIT_ORDER_ERROR,"Bits are transmitted in the wrong order","MSB/LSB configuration mismatch","Observed byte resembles bit-reversed expected value","Verify bit order configuration"
+F009,FRAME_LENGTH_ERROR,"SPI frame contains an unexpected number of bits","Incorrect frame configuration; incomplete transfer","Bit count differs from expected 8 bits","Check frame length and SPI configuration"
+F010,CHECKSUM_ERROR,"Received frame fails checksum validation","Data corruption; incorrect checksum implementation","Calculated checksum differs from received checksum","Validate checksum implementation and transmitted bytes"
+F011,DELAYED_RESPONSE,"Slave response arrives after the sampling deadline","Response generation too slow; interrupt latency","Response delay exceeds expected timing","Inspect response timing and ISR latency"
+F012,GLITCHED_CLOCK,"Clock contains an abnormal short pulse","Signal integrity issue; timing configuration; interrupt interference","Unexpected short clock period","Inspect waveform and clock generation"

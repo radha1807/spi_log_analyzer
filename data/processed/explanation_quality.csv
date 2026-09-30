@@ -1,0 +1,13 @@
+failure_type,file,deterministic_type,llm_type,confidence,structure_ok,type_ok,evidence_grounded,root_cause_present,two_checks_present,grounded,matched_keywords
+BIT_ORDER_ERROR,capture_0011.csv,BIT_ORDER_ERROR,BIT_ORDER_ERROR,1.0,True,True,True,True,True,True,"bit, order, bit_order"
+CLOCK_TOO_FAST,capture_0038.csv,CLOCK_TOO_FAST,CLOCK_TOO_FAST,1.0,True,True,True,True,True,True,"clock, khz"
+CLOCK_TOO_SLOW,capture_0003.csv,CLOCK_TOO_SLOW,CLOCK_TOO_SLOW,1.0,True,True,True,True,True,True,"clock, khz"
+DELAYED_RESPONSE,capture_0015.csv,DELAYED_RESPONSE,DELAYED_RESPONSE,1.0,True,True,True,True,True,True,"delay, response, us"
+FRAME_LENGTH_ERROR,capture_0002.csv,FRAME_LENGTH_ERROR,FRAME_LENGTH_ERROR,1.0,True,True,True,True,True,True,"frame, length"
+GLITCHED_CLOCK,capture_0004.csv,GLITCHED_CLOCK,GLITCHED_CLOCK,1.0,True,True,True,True,True,True,"glitch, clock"
+MISO_STUCK_HIGH,capture_0017.csv,MISO_STUCK_HIGH,MISO_STUCK_HIGH,1.0,True,True,True,True,True,True,"miso, high, stuck"
+MISO_STUCK_LOW,capture_0025.csv,MISO_STUCK_LOW,MISO_STUCK_LOW,1.0,True,True,True,True,True,True,"miso, low, stuck"
+MISSING_ACK,capture_0001.csv,MISSING_ACK,MISSING_ACK,1.0,True,True,True,True,True,True,response
+NORMAL,capture_0010.csv,NORMAL,NORMAL,1.0,True,True,True,True,True,True,"clock, period"
+SPI_TIMEOUT,capture_0005.csv,SPI_TIMEOUT,SPI_TIMEOUT,1.0,True,True,True,True,True,True,timeout
+WRONG_RESPONSE,capture_0006.csv,WRONG_RESPONSE,WRONG_RESPONSE,1.0,True,True,True,True,True,True,"response, expected, observed"
